@@ -1,0 +1,19 @@
+.container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+.main_page {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.scroll {
+  height: 100%;
+  flex: none;
+  scroll-snap-align: start;
+}

@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "title";
+  src: url(../fonts/LibreBaskerville-Italic.ttf);
+}
+@font-face {
+  font-family: "para";
+  src: url(../fonts/LibreBaskerville-Regular.ttf);
+}
+.movieInfo_container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+.movieInfo_container .content {
+  background-color: #adb5bd;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.65%;
+  width: 69.4%;
+  height: 96.6%;
+  clip-path: polygon(0 0, 42% 0%, 100% 100%, 0% 100%);
+  border-radius: 32px 0 0 32px;
+}
+.content .info {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10%;
+}
+.content .info h1 {
+  font-family: title;
+  color: white;
+  background-color: #a4133c;
+  padding: 5%;
+  width: 61%;
+  padding-right: 20%;
+  clip-path: polygon(0 0, 72% 0, 100% 100%, 0% 100%);
+
+  border-radius: 10% 10% 15% 10%;
+}
+.content .info p {
+  color: rgb(255, 255, 255);
+  padding: 4%;
+  padding-top: 2%;
+  border-radius: 5% 5% 15% 5%;
+  width: 86%;
+  height: 45%;
+  background-color: #a4133c;
+  padding-right: 14%;
+  clip-path: polygon(0 0, 78% 0, 100% 100%, 0% 100%);
+}
+.content .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 7%;
+  margin-top: -4%;
+  margin-left: -11%;
+}
+.buttons button {
+  background: linear-gradient(to bottom, #f24537 5%, #a4133c 100%);
+}
+button:hover {
+  background: linear-gradient(to bottom, #a4133c 5%, #f24537 100%);
+}
+.movieInfo_container .poster {
+  top: 0%;
+  right: 0%;
+  position: absolute;
+  padding: 0.61%;
+  width: 70%;
+  height: 99%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 59% 100%);
+}
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 0 32px 32px 0;
+  z-index: 22;
+}
+.loading {
+  position: absolute;
+  margin: auto;
+  margin-top: -3%;
+}
+.movie_player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(65, 64, 64);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+h1 {
+  margin-bottom: 2%;
+  color: rgba(255, 255, 255, 0.767);
+  font-weight: bolder;
+  padding: 2%;
+  border-radius: 15px;
+}
+video {
+  right: 1%;
+}

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Provider } from "react-redux";
+import Index from "./components";
+import MovieInfo from "./components/singleMovie/movieInfo";
+import PageNotFound from "./components/errors/PageNotFound";
+import { store } from "./reduxiom/Store";
+import "./style/css/mainStyle.css";
+import { BrowserRouter as Router , Route , Switch , Link } from "react-router-dom";
+import MoviePlayer from "./components/singleMovie/moviePlayer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Provider store={store}>
+        <Router >
+        <Switch >
+          <Route exact path="/" component={Index} />
+          <Route exact path="/movie/:movieName" component={MovieInfo} />
+          <Route path="/movie/:movieName/play" component={MoviePlayer} />
+          <Route path="*" component={PageNotFound} />
+        </Switch>
+        </Router>
+      </Provider>
     </div>
   );
 }

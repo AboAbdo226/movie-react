@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "brand_font";
+  src: url("../fonts/LibreBaskerville-Italic.ttf");
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  height: 670px;
+  background-image: url("../imgs/cover.jpg");
+  background-size: auto;
+  background-position: 60% 10%;
+  background-attachment: fixed;
+  background-repeat: cover;
+  display: flex;
+  justify-content: center;
+}
+.cover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 670px;
+  top: 0%;
+  left: 0%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 80%,
+    rgb(224, 224, 224) 97%
+  );
+}
+
+.navBar {
+  width: 90%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  border: 5px solid rgba(112, 20, 20, 0.349);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.navBar > * {
+  margin: 12px;
+  border: none;
+}
+*:focus {
+  outline: none;
+}
+#nav_brand {
+  margin-right: auto;
+  background-color: rgba(240, 74, 74, 0.199);
+  backdrop-filter: contrast(5%);
+  border-radius: 10px;
+  transform: rotate(-5deg);
+  cursor: pointer;
+}
+#nav_brand > * {
+  border: none;
+}
+
+button {
+  box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  background-color: #f24537;
+  border-radius: 6px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "brand_font";
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+}
+button:first-of-type {
+  margin-right: -10px;
+}
+button:hover {
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+  background-color: #c62d1f;
+}
+button:active {
+  position: relative;
+  box-shadow: 0px 0px 17px red;
+  top: 1px;
+}
+
+.searchDiv {
+  width: 19rem;
+  position: absolute;
+  right: 20%;
+  top: 5%;
+  border-radius: 12px;
+}
+.hints {
+  position: relative;
+  margin-top: 1%;
+  border-radius: 12px;
+  background-color: white;
+  column-gap: 0.3rem;
+  display: none;
+}
+.hints h4 {
+  color: rgba(0, 0, 0, 0.76);
+  border-bottom: 0.1rem solid black;
+  padding: 1rem 0%;
+  padding-left: 0.3rem;
+  max-height: 100px;
+  cursor: pointer;
+}
+.hints h4:first-of-type {
+  border-radius: 12px 12px 0 0;
+}
+.hints h4:last-of-type {
+  border: none;
+  border-radius: 0 0 12px 12px;
+}
+.hints h4:hover {
+  background-color: rgba(245, 39, 39, 0.705);
+}
+.search {
+  text-align: center;
+  width: 19rem;
+  height: 2rem;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(199, 199, 199);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(255, 0, 0, 0.753);
+}
+
+.brand_cover {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.cover .brand {
+  font-size: 7rem;
+  margin-top: 10%;
+  font-family: "brand_font";
+}
+.cover .red {
+  color: rgb(228, 0, 0);
+  text-shadow: 3px 3px 3px black;
+  border-top: 9px solid black;
+  border-left: 9px solid black;
+  padding: 10px 0px 10px 25px;
+}
+.cover .black {
+  color: rgb(8, 8, 8);
+  text-shadow: 3px 3px 8px rgb(230, 2, 2);
+  padding: 10px 25px 10px 0px;
+  border-bottom: 9px solid red;
+  border-right: 9px solid red;
+}
